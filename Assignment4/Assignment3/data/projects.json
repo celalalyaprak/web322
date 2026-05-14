@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Energy Saver",
+    "sector": "energy",
+    "feature_img_url": "https://via.placeholder.com/300x150",
+    "summary_short": "Focuses on renewable energy and clean power grids.",
+    "intro_short": "This project introduces solar-based grid technology.",
+    "impact": "Reduces fossil fuel dependency and carbon emissions.",
+    "original_source_url": "https://example.com/project-1"
+  },
+  {
+    "id": 2,
+    "title": "Eco Transport",
+    "sector": "transportation",
+    "feature_img_url": "https://via.placeholder.com/300x150",
+    "summary_short": "Improves urban mobility through electric transit.",
+    "intro_short": "A large-scale initiative for electric buses.",
+    "impact": "Reduces urban noise and air pollution.",
+    "original_source_url": "https://example.com/project-2"
+  },
+  {
+    "id": 3,
+    "title": "Green Farming",
+    "sector": "agriculture",
+    "feature_img_url": "https://via.placeholder.com/300x150",
+    "summary_short": "Promotes sustainable agriculture and soil health.",
+    "intro_short": "Training farmers on low-impact methods.",
+    "impact": "Increases food sustainability and biodiversity.",
+    "original_source_url": "https://example.com/project-3"
+  }
+]
