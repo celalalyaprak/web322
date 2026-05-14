@@ -1,0 +1,17 @@
+<nav class="bg-gray-100 p-4 shadow">
+  <ul class="flex gap-4">
+    <li><a class="<%= (page == '/solutions/addProject') ? 'active' : '' %>" href="/solutions/addProject">Add Project</a></li>
+    <li><a class="<%= (page == '/' ? 'font-bold text-blue-600' : '') %>" href="/">Home</a></li>
+    <li><a class="<%= (page == '/solutions/projects' ? 'font-bold text-blue-600' : '') %>" href="/solutions/projects">Projects</a></li>
+    <li><a class="<%= (page == '/about' ? 'font-bold text-blue-600' : '') %>" href="/about">About Me</a></li>
+
+    <% if (!session.user) { %>
+        <li><a class="<%= (page == '/login' ? 'font-bold text-blue-600' : '') %>" href="/login">Login</a></li>
+        <li><a class="<%= (page == '/register' ? 'font-bold text-blue-600' : '') %>" href="/register">Register</a></li>
+    <% } else { %>
+        <li class="ml-auto text-green-600">Welcome, <%= session.user.userName %>!</li>
+        <li><a class="<%= (page == '/userHistory' ? 'font-bold text-blue-600' : '') %>" href="/userHistory">History</a></li>
+        <li><a href="/logout">Logout</a></li>
+    <% } %>
+  </ul>
+</nav>

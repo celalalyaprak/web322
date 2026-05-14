@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <%- include('partials/navbar', { page: '/solutions/projects' }) %>
+
+  <% if (session.user) { %>
+      <p class="text-green-500 text-center mt-4">Logged in as <%= session.user.userName %></p>
+  <% } else { %>
+      <p class="text-red-500 text-center mt-4">You are NOT logged in</p>
+  <% } %>
+
+  <div class="container mx-auto px-4 py-8">
+    <div class="hero mb-6 text-center">
+      <h1 class="text-3xl font-bold mb-2">All Projects</h1>
+      <p class="text-gray-700 mb-4">Select a sector to explore related climate solutions:</p>
+
+      <div class="flex justify-center gap-4 mb-6">
+        <a href="/solutions/projects?sector=energy" class="btn">Energy</a>
+        <a href="/solutions/projects?sector=transportation" class="btn">Transportation</a>
+        <a href="/solutions/projects?sector=agriculture" class="btn">Agriculture</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <% projects.forEach(project => { %>
+        <div class="card p-4 border rounded shadow">
+          <img src="<%= project.feature_img_url %>" alt="<%= project.title %>" class="mb-2" />
+          <h3 class="font-bold text-lg"><%= project.title %></h3>
+          <p class="mb-2"><%= project.summary_short %></p>
+
+          <div class="flex justify-between items-center">
+            <a href="/solutions/projects/<%= project.id %>" class="btn text-blue-600 underline">View Project</a>
+
+            <% if (session.user) { %>
+              <a href="/solutions/editProject/<%= project.id %>" class="btn text-green-600 underline">Edit</a>
+            <% } %>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>
