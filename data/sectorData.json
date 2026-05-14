@@ -1,0 +1,5 @@
+[
+  { "id": 1, "sector_name": "energy" },
+  { "id": 2, "sector_name": "transportation" },
+  { "id": 3, "sector_name": "agriculture" }
+]
